@@ -36,7 +36,7 @@ async function getPokemonsData(id) {
   const pokemonAsJson = await respone.json();
   pokemon = pokemonAsJson;
   allPokemons.push(pokemon);
-  console.log(allPokemons);
+  //console.log(allPokemons);
   //console.log(pokemon);
   genratePokemonCard(pokemon, id);
 }
@@ -46,7 +46,6 @@ function genratePokemonCard(pokemon, id) {
   let pokemonID = pokemon['id'].toString().padStart(3, '0'); //add 3x 0 to the ID
   let pokemonTypes = pokemon['types'].map((element) => element['type']['name']); // extract types and put it in new array
   let type = mainTypes.find((type) => pokemonTypes.indexOf(type) > -1);
-
   let backgroundColors = colors[type];
   pokemonElement = document.createElement('div');
   pokemonElement.classList.add('pokemon');
@@ -59,7 +58,8 @@ function genratePokemonCard(pokemon, id) {
 function openPopup(i) {
   pokemonContainer.style.display = 'none';
   document.getElementById('pokemon_popup').classList.remove('d-none');
-  document.getElementById('pokemon_image').src = `https://pngimg.com/uploads/pokemon/pokemon_PNG${i}.png`;
+  document.getElementById('header').classList.add('d-none');
+  document.getElementById('pokemon_image').src = `https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/${i}.svg`;
   document.getElementById('base_experience').innerHTML = `Experience: ${allPokemons[i]['base_experience']}`;
   document.getElementById('height').innerHTML = `Height: ${allPokemons[i]['height']} CM`;
   document.getElementById('weight').innerHTML = `Weight: ${allPokemons[i]['weight']} KG`;
@@ -67,17 +67,17 @@ function openPopup(i) {
 
 function closePopup() {
   pokemonContainer.style.display = '';
+  document.getElementById('header').classList.remove('d-none');
   document.getElementById('pokemon_popup').classList.add('d-none');
 }
 
-/* async function filterPokemons(pokemon) {
-  let search = document.getElementById('search_field').value;
-  search = search.toLowerCase();
-  pokemonContainer.innerHTML = '';
-  for (let i = 1; i < pokemonsLimit; i++) {
-    if (pokemon.toLowerCase().includes(search)) {
-      await getPokemonsData(i);
-    }
-  }
-}
+
+/*  todoS
+function filterPokemons() {
+  let query = document.getElementById('search_field').value;
+  let filtedResults = allPokemons.filter(function (name) {
+    return name.allPokemons.includes(query);
+  });
+  console.log(filtedResults);
+} 
  */

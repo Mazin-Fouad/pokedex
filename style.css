@@ -5,6 +5,7 @@ body {
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
   background-color: #2c3639;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -15,8 +16,8 @@ body {
 .d-none {
   display: none;
 }
-
 /* End Global Rules */
+
 
 /* Start Styling Header */
 header {
@@ -44,6 +45,7 @@ header {
   color: #0f0e0e;
 }
 /* End Styling Header */
+
 
 /* Start styling Pokemon Container Section */
 #pokemon_container {
@@ -105,16 +107,17 @@ header {
 .pokemon-name {
   margin-top: 5px;
 }
+/* End styling Pokemon Container Section */
 
-/* Start styling Pokemon Container Section */
 
+/* Start styling Pokemon Popup */
 .pokemon-popup {
   width: 60%;
   height: 600px;
   background-color: #fff;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 80px;
+  margin-top: 25vh;
   animation: popup 0.8s ease-in-out;
 }
 
@@ -127,7 +130,6 @@ header {
   }
 }
 
-/* Start styling Pokemon Popup */
 .pokemon-popup {
   position: relative;
   width: 400px;
@@ -172,15 +174,13 @@ header {
   background-color: #eb3565;
   color: #FEDB39;
   font-weight: bold;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   text-align: center;
   padding: 15px;
   width: 60%;
   border-radius: 8px;
 }
-
 /* End styling Pokemon Popup */
-
 
 
  /* Start Media Queries */
