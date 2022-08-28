@@ -18,7 +18,6 @@ body {
 }
 /* End Global Rules */
 
-
 /* Start Styling Header */
 header {
   color: var(--main-color);
@@ -45,7 +44,6 @@ header {
   color: #0f0e0e;
 }
 /* End Styling Header */
-
 
 /* Start styling Pokemon Container Section */
 #pokemon_container {
@@ -108,7 +106,6 @@ header {
   margin-top: 5px;
 }
 /* End styling Pokemon Container Section */
-
 
 /* Start styling Pokemon Popup */
 .pokemon-popup {
@@ -181,7 +178,6 @@ header {
   border-radius: 8px;
 }
 /* End styling Pokemon Popup */
-
 
  /* Start Media Queries */
 @media screen and (max-width: 480px) {
