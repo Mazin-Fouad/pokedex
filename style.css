@@ -38,7 +38,7 @@ header {
 #search_field {
   all: unset;
   width: 300px;
-  background-color: #ffff;
+  background-color: var(--main-color);
   padding: 10px 20px;
   border-radius: 20px;
   color: #0f0e0e;
@@ -71,7 +71,7 @@ header {
   margin-bottom: 25px;
   margin-left: 10px;
   border-radius: 8px;
-  border: 1px solid #ffff;
+  border: 1px solid var(--main-color);
   transition: all 225ms ease-in-out;
 }
 
@@ -224,7 +224,7 @@ header {
   margin-top: 20px;
   font-size: 18px;
   background-color: #eb3565;
-  color: #FEDB39;
+  color: var(--main-color);
   font-weight: bold;
   letter-spacing: 1.5px;
   text-align: center;
