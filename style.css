@@ -108,7 +108,7 @@ header {
 
 .scroll-btn{
   position: fixed;
-  right: 40px;
+  right: 10px;
   bottom: 30px;
   cursor: pointer;
  animation: myAnim 4s ease-in-out;
@@ -159,7 +159,6 @@ header {
 		transform: translateY(0px);
 	}
 }
-
 /* End styling Pokemon Container Section */
 
 /* Start styling Pokemon Popup */
