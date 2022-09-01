@@ -1,4 +1,4 @@
-let pokemonsLimit = 29;
+let pokemonsLimit = 62;
 let pokemon;
 let allPokemons = [];
 let pokemonContainer = document.getElementById('pokemon_container');
@@ -23,3 +23,4 @@ let colors = {
   fairy: '#D685AD',
 };
 let mainTypes = Object.keys(colors);
+let scrollBtn = document.getElementById('scroll_btn');

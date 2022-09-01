@@ -45,3 +45,18 @@ function closePopup() {
   document.getElementById('pokemon_popup').classList.add('d-none');
 }
 
+window.onscroll = function () {
+  if (scrollY >= 400) {
+    scrollBtn.classList.remove('d-none');
+  } else {
+    scrollBtn.classList.add('d-none');
+  }
+};
+
+function scrollUp(){
+  scroll({
+    top: 0,
+    left: 0,
+    behavior: "smooth"
+  })
+}
